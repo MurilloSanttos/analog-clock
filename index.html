@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metadados Essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metatags para SEO e Acessibilidade -->
+    <title>Relógio Analógico - HTML, CSS e JavaScript Puro</title>
+    <meta name="description" content="Relógio analógico responsivo desenvolvido com tecnologicas web puras. Projeto front-end para demonstração de habilidades em HTML, CSS e JavaScript.">
+    <meta name="author" content="Murillo Santos - murilo.azevedo.d.santos@gmail.com">
+    <meta name="keyboards" content="relógio analógico, HTML, CSS, JavaScript, front-end, projeto, portfolio">
+    <meta name="theme-color" content="#2C3E50">
+
+    <!-- Links para Estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/themes.css">
+
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+
+    <!-- Preload para melhor perfomance -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
+</head>
+<body>
+    <!-- Container Principal do Projeto -->
+    <div class="app-container">
+        
+        <!-- Cabeçalho com Título e Controles -->
+        <header class="app-header">
+            <h1 class="app-title">Relógio Analógico</h1>
+            <div class="controls-container">
+                <!-- Botão de Tema -->
+                <button class="theme-toggle" aria-label="Alternar entre tema claro e escuro">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Área Principal do Relógio -->
+        <main class="main-content">
+
+            <!-- Container do Relógio Analógico -->
+            <div class="clock-container">
+                <div class="clock-wrapper">
+
+                    <!-- Mostrador do Relógio -->
+                    <div class="clock-face">
+
+                        <!-- Marcações das Horas -->
+                        <div class="hour-marks">
+                            <!-- Marcações serão adicionadas via CSS/JS -->
+                        </div>
+
+                        <!-- Marcações dos Minutos -->
+                        <div class="minute-marks">
+                            <!-- Marcações mais finas para minutos -->
+                        </div>
+
+                        <!-- Ponteiros do Relógio -->
+                        <div class="clock-hands">
+                            <!-- Ponteiro das Horas -->
+                            <div class="hand hour-hand" id="hour-hand"></div>
+
+                            <!-- Pointeiro dos Minutos -->
+                            <div class="hand minute-hand" id="minute-hand"></div>
+
+                            <!-- Ponteiro dos Segundos -->
+                            <div class="hand second-hand" id="second-hand"></div>
+
+                            <!-- Centro do Relógio -->
+                            <div class="clock-center"></div>
+                        </div>
+
+                        <!-- Números das Horas (1-12) -->
+                        <div class="hour-numbers">
+                            <!-- Números serão posicionados via CSS -->
+                            <span class="hour-number" style="--hour: 1">1</span>
+                            <span class="hour-number" style="--hour: 2">2</span>
+                            <span class="hour-number" style="--hour: 3">3</span>
+                            <span class="hour-number" style="--hour: 4">4</span>
+                            <span class="hour-number" style="--hour: 5">5</span>
+                            <span class="hour-number" style="--hour: 6">6</span>
+                            <span class="hour-number" style="--hour: 7">7</span>
+                            <span class="hour-number" style="--hour: 8">8</span>
+                            <span class="hour-number" style="--hour: 9">9</span>
+                            <span class="hour-number" style="--hour: 10">10</span>
+                            <span class="hour-number" style="--hour: 11">11</span>
+                            <span class="hour-number" style="--hour: 12">12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Display Digital Complementar -->
+            <div class="digital-display">
+                <time id="digital-time" datetime="--:--:--"></time>
+                <date id="digital-date">---, -- --- ----</date>
+            </div>
+
+            <!-- Controlse Adicionais -->
+            <div class="additional-controls">
+                <!-- Botão para Pausar/Retomar (futura implementação) -->
+                <button class="control-btn" id="pause-btn" aria-label="Pausar relógio">
+                    ⏸️ Pausar
+                </button>
+
+                <!-- Seletor de Estilo de Ponteiros (futua implementação) -->
+                <select class="style-selector" id="hand-style" aria-label="Selecionar estilo dos ponteiros">
+                    <option value="classic">Clássico</option>
+                    <option value="modern">Moderno</option>
+                    <option value="minimal">Minimalista</option>
+                </select>
+            </div>
+        </main>
+
+        <!-- Rodapé com Informações -->
+        <footer class="app-footer">
+            <p>Desenvolvido com ❤️ por <a href="mailto:murilo.azevedo.d.santos@gmail.com">Murillo Santtos</a></p>
+            <p class="tech-stack">HTML 5 • CSS3 • JavaScript</p>
+        </footer>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Script de Inicialização -->
+    <script>
+        // Inicialização do relógio quando o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🕐 Relógio Analógico - Inicializando...');
+
+            // Inicializar funcionalidades aqui posteriormente
+            // initClock();
+            // initThemes();
+        });
+    </script>
+</body>
+</html>
