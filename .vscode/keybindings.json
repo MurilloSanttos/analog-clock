@@ -1,0 +1,14 @@
+[
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.toggleSidebarVisibility"
+  }
+]
